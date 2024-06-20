@@ -1,5 +1,5 @@
 const imgs = document.querySelectorAll('.header-slider ul img');
-const prev_btn = document.querySelector('.control_prev');
+const prev_btn = document.querySelector('.control_prey');
 const next_btn = document.querySelector('.control_next');
 
 let n = 0;
@@ -38,3 +38,21 @@ for (const item of scrollContainer) {
         item.scrollLeft += evt.deltaY;
     })
 }
+
+/* sidebar*/
+const sidebar = document.querySelector(".sidebar");
+const cross = document.querySelector(".fa-xmark");
+const black = document.querySelector(".black");
+const sidebtn = document.querySelector(".second-1");
+
+sidebtn.addEventListener("click",()=> {
+    sidebar.classList.add("active");
+    cross.classList.add("active");
+    black.classList.add("active");
+})
+
+cross.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+    cross.classList.remove('active');
+    black.classList.remove('active');
+});
